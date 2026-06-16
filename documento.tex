@@ -1,40 +1,26 @@
-%% Ficha Catalográfica
-%%
-%% Este template cria um quadro semelhante a ficha catalográfica oficial.
-%% É melhor usar \includepdf depois que a ficha oficial estiver em mãos.
 
-%% Caso tenha o arquivo PDF da ficha
-%% A ficha catalográfica do IFPI pode ser gerada através neste link: https://sistemas.ifpi.edu.br/fichacatalografica/
-\includepdf{pre-textual/ficha-catalografica.pdf}
+%% Preâmbulo (configurações, pacotes e tudo mais)
+\input{estrutura/preambulo}
 
-%% Caso queira fazer a ficha "tradicional" (este serve apenas como um modelo)
-%\begin{fichacatalografica}
-%	\sffamily
-%	\vspace*{\fill}					% Posição vertical
-%	\begin{center}					% Minipage Centralizado
-%	\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
-%	\small
-%	\imprimirautor
-%	
-%	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
-%	\imprimirlocal, \imprimirdata-
-%	
-%	\hspace{0.5cm} \thelastpage p. : il. (algumas color.) ; 30 cm.\\
-%	
-%	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
-%	
-%	\hspace{0.5cm}
-%	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
-%	\imprimirdata.}\\
-%	
-%	\hspace{0.5cm}
-%		1. Palavra-chave1.
-%		2. Palavra-chave2.
-%		2. Palavra-chave3.
-%		I. Orientador.
-%		II. Universidade xxx.
-%		III. Faculdade de xxx.
-%		IV. Título 			
-%	\end{minipage}}
-%	\end{center}
-%\end{fichacatalografica}
+%% Início do Documento
+\begin{document}
+
+%% Documento será escrito em Português do Brasil
+\selectlanguage{brazil}
+
+%% Elementos pré-textuais: capa, folha de rosto, dedicatória, listas, sumário, etc.
+\input{estrutura/pre-textual.tex}
+
+%% Indica que a partir daqui ficarão os elementos textuais (TCC em si)
+\textual
+
+%% Inclui os capítulos do TCC (parte textual)
+\input{estrutura/textual}
+
+%% Finalizações para o PDF
+\bookmarksetup{startatroot}
+
+%% Elementos pós-textuais: Referências, Anexos, etc.
+\include{estrutura/pos-textual}
+
+\end{document}
