@@ -12,6 +12,15 @@ Template baseado no [abnTeX2](https://github.com/abntex/abntex2), adaptado para 
 
 ---
 
+## Como Usar
+
+1. Faça o download do arquivo `.zip` deste repositório;
+2. Acesse o [Overleaf](https://www.overleaf.com) e clique em **New Project → Upload Project**;
+3. Envie o arquivo `.zip` baixado;
+4. Siga os passos indicados na seção **Primeiros Passos** abaixo para configurar seu trabalho.
+
+---
+
 ## Estrutura de Pastas
 
 ```
